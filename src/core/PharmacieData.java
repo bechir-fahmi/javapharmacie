@@ -29,7 +29,7 @@ public class PharmacieData {
                 pharmacien.setPhone(rs.getString("phone"));
                 pharmacienList.add(pharmacien);
 
-                pharmacien.getFirstName();
+               System.out.println(pharmacien.getFirstName());
             }
 
         } catch (SQLException ex) {

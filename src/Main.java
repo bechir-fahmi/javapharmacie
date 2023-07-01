@@ -1,4 +1,6 @@
 import ConnectionDataBase.ConnectionDB;
+import tables.CreatTableFacture;
+import tables.CreatTableMedicament;
 import tables.CreateTableUsers;
 import core.PharmacieData;
 import models.Pharmacien;
@@ -9,7 +11,9 @@ public class Main {
     public static void main(String[] args) throws SQLException {
 //        System.out.println("Hello world!");
         CreateTableUsers.CreateIfNotExist();
-         try {
+        CreatTableMedicament.CreateIfNotExist();
+        CreatTableFacture.CreateIfNotExist();
+        try {
             ConnectionDB db = new ConnectionDB("jdbc:mysql://localhost:3306/pharmaciedb", "root", "");
 //            db.getConnection();
             PharmacieData userData = new PharmacieData(db);
