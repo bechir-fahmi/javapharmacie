@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws SQLException {
 //        System.out.println("Hello world!");
         CreateTableUsers.CreateIfNotExist();
-        try {
+         try {
             ConnectionDB db = new ConnectionDB("jdbc:mysql://localhost:3306/pharmaciedb", "root", "");
 //            db.getConnection();
             PharmacieData userData = new PharmacieData(db);
