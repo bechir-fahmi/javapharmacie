@@ -10,12 +10,12 @@ public class CreatTableFacture {
     private static final String CREATE_TABLE_SQL =
             "CREATE TABLE IF NOT EXISTS factures (" +
                     "id_fac INT NOT NULL AUTO_INCREMENT," +
-                    "id_med INT, "+
-                    "id INT,"+
-                    "numfac VARCHAR(50) NOT NULL," +
-                    "qnt_med INT NOT NULL," +
-                    "totale REAL NOT NULL,"+
-                    "PRIMARY KEY (id_fac) ," +"FOREIGN KEY (id_med) REFERENCES medicaments(id_med),"+"FOREIGN KEY (id) REFERENCES users(id)" + ")";
+                    "numero VARCHAR(50) NOT NULL," +
+                    "date DATE NOT NULL," +
+                    "montant REAL NOT NULL," +
+                    "PRIMARY KEY (id_fac)," +
+                    "isdeleted DATE DEFAULT NULL" +
+                    ")";
     public  static void  CreateIfNotExist() throws SQLException {
 
         Connection conn = null;

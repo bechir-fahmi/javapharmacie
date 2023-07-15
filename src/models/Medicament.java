@@ -9,13 +9,19 @@ public class Medicament {
     private Date DLC;
     private String lot;
     private float prix;
+    private String med_name;
 
-    public Medicament(int id_med, int quantite, Date DLC, String lot, float prix) {
+    public Medicament(int id_med, int quantite, Date DLC, String lot, float prix, String med_name) {
         this.id_med = id_med;
         this.quantite = quantite;
         this.DLC = DLC;
         this.lot = lot;
         this.prix = prix;
+        this.med_name = med_name;
+    }
+
+
+    public Medicament() {
     }
 
     public int getId_med() {
@@ -58,14 +64,24 @@ public class Medicament {
         this.prix = prix;
     }
 
+
+    public String getMed_name() {
+        return med_name;
+    }
+
+    public void setMed_name(String med_name) {
+        this.med_name = med_name;
+    }
+
     @Override
     public String toString() {
-        return "medicament{" +
+        return "Medicament{" +
                 "id_med=" + id_med +
                 ", quantite=" + quantite +
                 ", DLC=" + DLC +
                 ", lot='" + lot + '\'' +
                 ", prix=" + prix +
+                ", med_name='" + med_name + '\'' +
                 '}';
     }
 

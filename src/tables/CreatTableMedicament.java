@@ -12,6 +12,7 @@ public class CreatTableMedicament {
     private static final String CREATE_TABLE_SQL =
             "CREATE TABLE IF NOT EXISTS medicaments (" +
                     "id_med INT NOT NULL AUTO_INCREMENT," +
+                    "name_med VARCHAR(50) NOT NULL ,"+
                     "quantite INT (50) NOT NULL," +
                     "DLC DATE NOT NULL," +
                     "lot VARCHAR(50) NOT NULL ,"+
